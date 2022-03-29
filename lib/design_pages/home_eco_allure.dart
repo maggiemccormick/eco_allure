@@ -4,6 +4,7 @@ import 'popular_brands_list_view.dart';
 import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';
 import 'eco_allure_app_theme.dart';
+import 'package:eco_allure/models/category.dart';
 
 class EcoAllureHomeScreen extends StatefulWidget {
   @override
@@ -136,23 +137,28 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
     );
   }
 
+  // function that changes UI based on which category button is selected
   Widget getButtonUI(CategoryType categoryTypeData, bool isSelected) {
     String txt = '';
+    List<Category> listCat = <Category>[];
     if (CategoryType.skincare == categoryTypeData) {
       txt = 'Skincare';
+      listCat = Category.categorySkincare;
     } else if (CategoryType.makeup == categoryTypeData) {
       txt = 'Makeup';
+      listCat = Category.categoryMakeup;
     } else if (CategoryType.health == categoryTypeData) {
       txt = 'Health';
+      listCat = Category.categoryHealth;
     }
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
             color: isSelected
-                ? EcoAllureAppTheme.nearlyBlue
+                ? EcoAllureAppTheme.nearlyGreen
                 : EcoAllureAppTheme.nearlyWhite,
             borderRadius: const BorderRadius.all(Radius.circular(24.0)),
-            border: Border.all(color: EcoAllureAppTheme.nearlyBlue)),
+            border: Border.all(color: EcoAllureAppTheme.nearlyGreen)),
         child: Material(
           color: Colors.transparent,
           child: InkWell(
@@ -162,6 +168,8 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
               setState(() {
                 categoryType = categoryTypeData;
               });
+              mainList.clear();
+              mainList.addAll(listCat);
             },
             child: Padding(
               padding: const EdgeInsets.only(
@@ -176,7 +184,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
                     letterSpacing: 0.27,
                     color: isSelected
                         ? EcoAllureAppTheme.nearlyWhite
-                        : EcoAllureAppTheme.nearlyBlue,
+                        : EcoAllureAppTheme.nearlyGreen,
                   ),
                 ),
               ),
@@ -219,7 +227,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
                             fontFamily: 'WorkSans',
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
-                            color: EcoAllureAppTheme.nearlyBlue,
+                            color: EcoAllureAppTheme.nearlyGreen,
                           ),
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
@@ -296,7 +304,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
           Container(
             width: 60,
             height: 60,
-            child: Image.asset('assets/userImage.png'),
+            child: Image.asset('assets/ecoAllureLogo.png'),
           )
         ],
       ),
