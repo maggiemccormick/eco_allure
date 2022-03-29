@@ -2,6 +2,7 @@ import 'eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
 import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 List<Category> mainList = <Category>[]; // need to figure out how to get skincare to load first
 

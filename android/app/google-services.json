@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "286744054678",
+    "project_id": "eco-allure",
+    "storage_bucket": "eco-allure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286744054678:android:011dfa354b0e4fb8986bb7",
+        "android_client_info": {
+          "package_name": "com.mccormick.eco_allure"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286744054678-7v4542ol2jcp9tclra00f8e38n4inctf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZtR8Y2I8L-aAzMOe-ow3MMumzI3AmMlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286744054678-7v4542ol2jcp9tclra00f8e38n4inctf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
