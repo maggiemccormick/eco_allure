@@ -56,7 +56,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/webInterFace.png'),
+                  child: Image.asset('assets/neutrogena.jpg'),
                 ),
               ],
             ),
@@ -119,7 +119,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                     fontWeight: FontWeight.w200,
                                     fontSize: 22,
                                     letterSpacing: 0.27,
-                                    color: EcoAllureAppTheme.nearlyBlue,
+                                    color: EcoAllureAppTheme.nearlyGreen,
                                   ),
                                 ),
                                 Container(
@@ -136,8 +136,8 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                         ),
                                       ),
                                       Icon(
-                                        Icons.star,
-                                        color: EcoAllureAppTheme.nearlyBlue,
+                                        Icons.emoji_nature,
+                                        color: EcoAllureAppTheme.nearlyGreen,
                                         size: 24,
                                       ),
                                     ],
@@ -207,7 +207,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                       ),
                                       child: Icon(
                                         Icons.add,
-                                        color: EcoAllureAppTheme.nearlyBlue,
+                                        color: EcoAllureAppTheme.nearlyGreen,
                                         size: 28,
                                       ),
                                     ),
@@ -219,14 +219,14 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                     child: Container(
                                       height: 48,
                                       decoration: BoxDecoration(
-                                        color: EcoAllureAppTheme.nearlyBlue,
+                                        color: EcoAllureAppTheme.nearlyGreen,
                                         borderRadius: const BorderRadius.all(
                                           Radius.circular(16.0),
                                         ),
                                         boxShadow: <BoxShadow>[
                                           BoxShadow(
                                               color: EcoAllureAppTheme
-                                                  .nearlyBlue
+                                                  .nearlyGreen
                                                   .withOpacity(0.5),
                                               offset: const Offset(1.1, 1.1),
                                               blurRadius: 10.0),
@@ -269,7 +269,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                 scale: CurvedAnimation(
                     parent: animationController!, curve: Curves.fastOutSlowIn),
                 child: Card(
-                  color: EcoAllureAppTheme.nearlyBlue,
+                  color: EcoAllureAppTheme.nearlyGreen,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0)),
                   elevation: 10.0,
@@ -342,7 +342,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
                   letterSpacing: 0.27,
-                  color: EcoAllureAppTheme.nearlyBlue,
+                  color: EcoAllureAppTheme.nearlyGreen,
                 ),
               ),
               Text(

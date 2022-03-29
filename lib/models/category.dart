@@ -20,6 +20,26 @@ class Category {
       lessonCount: 27,
       money: 25,
       rating: 4.3,
+    ),Category(
+      imagePath: 'assets/interFace1.png',
+      title: 'TESTER1',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
+    ),
+    Category(
+      imagePath: 'assets/interFace2.png',
+      title: 'TESTER2',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
+    ),
+    Category(
+      imagePath: 'assets/interFace3.png',
+      title: 'TESTER3',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
     ),
   ];
 
@@ -30,6 +50,27 @@ class Category {
       lessonCount: 22,
       money: 18,
       rating: 4.6,
+    ),
+    Category(
+      imagePath: 'assets/interFace1.png',
+      title: 'TESTER1',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
+    ),
+    Category(
+      imagePath: 'assets/interFace2.png',
+      title: 'TESTER2',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
+    ),
+    Category(
+      imagePath: 'assets/interFace3.png',
+      title: 'TESTER3',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
     ),
   ];
 
@@ -47,6 +88,20 @@ class Category {
       lessonCount: 22,
       money: 18,
       rating: 4.6,
+    ),
+    Category(
+      imagePath: 'assets/interFace2.png',
+      title: 'TESTER 1',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
+    ),
+    Category(
+      imagePath: 'assets/interFace3.png',
+      title: 'TESTER2',
+      lessonCount: 24,
+      money: 25,
+      rating: 4.3,
     ),
   ];
 

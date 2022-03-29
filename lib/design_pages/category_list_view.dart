@@ -3,6 +3,8 @@ import 'package:eco_allure/models/category.dart';
 import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';
 
+List<Category> mainList = <Category>[]; // need to figure out how to get skincare to load first
+
 class CategoryListView extends StatefulWidget {
   const CategoryListView({Key? key, this.callBack}) : super(key: key);
 
@@ -49,12 +51,12 @@ class _CategoryListViewState extends State<CategoryListView>
               return ListView.builder(
                 padding: const EdgeInsets.only(
                     top: 0, bottom: 0, right: 16, left: 16),
-                itemCount: Category.categoryHealth.length,
+                itemCount: mainList.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (BuildContext context, int index) {
-                  final int count = Category.categoryHealth.length > 10
+                  final int count = mainList.length > 10
                       ? 10
-                      : Category.categoryHealth.length;
+                      : mainList.length;
                   final Animation<double> animation =
                   Tween<double>(begin: 0.0, end: 1.0).animate(
                       CurvedAnimation(
@@ -64,7 +66,7 @@ class _CategoryListViewState extends State<CategoryListView>
                   animationController?.forward();
 
                   return CategoryView(
-                    category: Category.categoryHealth[index],
+                    category: mainList[index],
                     animation: animation,
                     animationController: animationController,
                     callback: widget.callBack,
@@ -189,10 +191,10 @@ class CategoryView extends StatelessWidget {
                                                         ),
                                                       ),
                                                       Icon(
-                                                        Icons.star,
+                                                        Icons.emoji_nature,
                                                         color:
                                                         EcoAllureAppTheme
-                                                            .nearlyBlue,
+                                                            .nearlyGreen,
                                                         size: 20,
                                                       ),
                                                     ],
@@ -219,13 +221,13 @@ class CategoryView extends StatelessWidget {
                                                     fontSize: 18,
                                                     letterSpacing: 0.27,
                                                     color: EcoAllureAppTheme
-                                                        .nearlyBlue,
+                                                        .nearlyGreen,
                                                   ),
                                                 ),
                                                 Container(
                                                   decoration: BoxDecoration(
                                                     color: EcoAllureAppTheme
-                                                        .nearlyBlue,
+                                                        .nearlyGreen,
                                                     borderRadius:
                                                     const BorderRadius.all(
                                                         Radius.circular(
