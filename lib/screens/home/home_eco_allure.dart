@@ -1,9 +1,10 @@
+import 'package:eco_allure/services/auth.dart';
 import 'category_list_view.dart';
 import 'brand_info_screen.dart';
 import 'popular_brands_list_view.dart';
 import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';
-import 'eco_allure_app_theme.dart';
+import '../../eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
 
 class EcoAllureHomeScreen extends StatefulWidget {
@@ -13,6 +14,8 @@ class EcoAllureHomeScreen extends StatefulWidget {
 
 class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
   CategoryType categoryType = CategoryType.skincare;
+
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -304,7 +307,12 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
           Container(
             width: 60,
             height: 60,
-            child: Image.asset('assets/ecoAllureLogo.png'),
+            child: IconButton(
+              icon: Image.asset('assets/ecoAllureLogo.png'),
+              onPressed: () async {
+                await _auth.signOut();
+              },
+            )
           )
         ],
       ),

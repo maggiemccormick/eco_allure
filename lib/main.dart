@@ -1,13 +1,22 @@
 import 'dart:io';
-import 'package:eco_allure/design_pages/eco_allure_app_theme.dart';
+import 'package:eco_allure/eco_allure_app_theme.dart';
+import 'package:eco_allure/models/ecoallure_user.dart';
+import 'package:eco_allure/screens/wrapper.dart';
+import 'package:eco_allure/services/auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:eco_allure/design_pages/home_eco_allure.dart';
+import 'package:eco_allure/screens/home/home_eco_allure.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:provider/provider.dart';
 //import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp().whenComplete((){
+    print('completed');
+    //setState(() {});
+  });
   await SystemChrome.setPreferredOrientations(<DeviceOrientation>[
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown
@@ -26,15 +35,20 @@ class MyApp extends StatelessWidget {
       systemNavigationBarDividerColor: Colors.transparent,
       systemNavigationBarIconBrightness: Brightness.dark,
     ));
-    return MaterialApp(
-      title: 'EcoAllure',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: EcoAllureAppTheme.textTheme,
-        platform: TargetPlatform.iOS,
+    return StreamProvider<EcoAllureUser?>.value(
+      catchError: (_, __) => null,
+      initialData: null,
+      value: AuthService().user,
+      child: MaterialApp(
+        title: 'EcoAllure',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          textTheme: EcoAllureAppTheme.textTheme,
+          platform: TargetPlatform.iOS,
+        ),
+        home: Wrapper(),
       ),
-      home: EcoAllureHomeScreen(),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'eco_allure_app_theme.dart';
+import '../../eco_allure_app_theme.dart';
 
 class BrandInfoScreen extends StatefulWidget {
   @override
