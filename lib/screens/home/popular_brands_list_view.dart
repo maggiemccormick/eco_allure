@@ -1,4 +1,4 @@
-import 'eco_allure_app_theme.dart';
+import '../../eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
 import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';

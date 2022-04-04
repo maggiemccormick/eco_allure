@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
 class EcoAllureAppTheme {
   EcoAllureAppTheme._();
+
+  static const Color loginGradientStart = Color(0xFFA8CF45);
+  static const Color loginGradientEnd = Color(0xFF28844B);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color black = Color(0xFF000000);
+
+  static const LinearGradient primaryGradient = LinearGradient(
+    colors: <Color>[loginGradientStart, loginGradientEnd],
+    stops: <double>[0.0, 1.0],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+  );
 
   static const Color notWhite = Color(0xFFEDF0F2);
   static const Color nearlyWhite = Color(0xFFFFFFFF);
