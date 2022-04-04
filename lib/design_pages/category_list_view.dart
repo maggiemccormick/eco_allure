@@ -2,7 +2,7 @@ import 'eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
 import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+//import 'package:cloud_firestore/cloud_firestore.dart';
 
 List<Category> mainList = <Category>[]; // need to figure out how to get skincare to load first
 
@@ -164,7 +164,7 @@ class CategoryView extends StatelessWidget {
                                               CrossAxisAlignment.center,
                                               children: <Widget>[
                                                 Text(
-                                                  '${category!.lessonCount} lesson',
+                                                  category!.cat,
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
                                                     fontWeight: FontWeight.w200,
@@ -178,7 +178,7 @@ class CategoryView extends StatelessWidget {
                                                   child: Row(
                                                     children: <Widget>[
                                                       Text(
-                                                        '${category!.rating}',
+                                                        category!.rating,
                                                         textAlign:
                                                         TextAlign.left,
                                                         style: TextStyle(
@@ -206,7 +206,7 @@ class CategoryView extends StatelessWidget {
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                                bottom: 16, right: 16),
+                                               bottom: 16, right: 16),
                                             child: Row(
                                               mainAxisAlignment:
                                               MainAxisAlignment
@@ -215,10 +215,10 @@ class CategoryView extends StatelessWidget {
                                               CrossAxisAlignment.start,
                                               children: <Widget>[
                                                 Text(
-                                                  '\$${category!.money}',
+                                                  'Read more',
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
-                                                    fontWeight: FontWeight.w600,
+                                                    fontWeight: FontWeight.w400,
                                                     fontSize: 18,
                                                     letterSpacing: 0.27,
                                                     color: EcoAllureAppTheme
@@ -239,7 +239,7 @@ class CategoryView extends StatelessWidget {
                                                     const EdgeInsets.all(
                                                         4.0),
                                                     child: Icon(
-                                                      Icons.add,
+                                                      Icons.arrow_forward_outlined,
                                                       color:
                                                       EcoAllureAppTheme
                                                           .nearlyWhite,

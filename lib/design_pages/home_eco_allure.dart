@@ -32,7 +32,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
                   height: MediaQuery.of(context).size.height,
                   child: Column(
                     children: <Widget>[
-                      getSearchBarUI(),
+                      //getSearchBarUI(),
                       getCategoryUI(),
                       Flexible(
                         child: getPopularCourseUI(),
@@ -83,7 +83,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
                 width: 16,
               ),
               getButtonUI(
-                  CategoryType.health, categoryType == CategoryType.health),
+                  CategoryType.hair, categoryType == CategoryType.hair),
             ],
           ),
         ),
@@ -147,9 +147,9 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
     } else if (CategoryType.makeup == categoryTypeData) {
       txt = 'Makeup';
       listCat = Category.categoryMakeup;
-    } else if (CategoryType.health == categoryTypeData) {
-      txt = 'Health';
-      listCat = Category.categoryHealth;
+    } else if (CategoryType.hair == categoryTypeData) {
+      txt = 'Hair';
+      listCat = Category.categoryHair;
     }
     return Expanded(
       child: Container(
@@ -224,7 +224,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
                         padding: const EdgeInsets.only(left: 16, right: 16),
                         child: TextFormField(
                           style: TextStyle(
-                            fontFamily: 'WorkSans',
+                            fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                             color: EcoAllureAppTheme.nearlyGreen,
@@ -315,5 +315,5 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
 enum CategoryType {
   skincare,
   makeup,
-  health,
+  hair,
 }

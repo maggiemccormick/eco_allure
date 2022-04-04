@@ -1,169 +1,205 @@
+import 'package:eco_allure/models/category_data.dart';
+
 class Category {
   Category({
     this.title = '',
     this.imagePath = '',
-    this.lessonCount = 0,
-    this.money = 0,
-    this.rating = 0.0,
+    this.cat = '',
+    this.rating = '',
+    this.ingredients = '',
+    this.sustainability = '',
+    this.animalRights = '',
   });
 
   String title;
-  int lessonCount;
-  int money;
-  double rating;
+  String cat;
+  String rating;
   String imagePath;
+  String ingredients;
+  String sustainability;
+  String animalRights;
 
   static List<Category> categorySkincare = <Category>[
-    Category(
-      imagePath: 'assets/neutrogena.jpg',
-      title: 'Neutrogena',
-      lessonCount: 27,
-      money: 25,
-      rating: 4.3,
-    ),Category(
-      imagePath: 'assets/interFace1.png',
-      title: 'TESTER1',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/interFace2.png',
-      title: 'TESTER2',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/interFace3.png',
-      title: 'TESTER3',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-  ];
+    neutrogena, ceraVe, clinique, beautyCounter];
 
   static List<Category> categoryMakeup = <Category>[
-    Category(
-      imagePath: 'assets/cerave.jpg',
-      title: 'CeraVe',
-      lessonCount: 22,
-      money: 18,
-      rating: 4.6,
-    ),
-    Category(
-      imagePath: 'assets/interFace1.png',
-      title: 'TESTER1',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/interFace2.png',
-      title: 'TESTER2',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/interFace3.png',
-      title: 'TESTER3',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-  ];
+    bareMinerals, kosas, burtsBees, tarte];
 
-  static List<Category> categoryHealth = <Category>[
-    Category(
-      imagePath: 'assets/curology.jpeg',
-      title: 'Curology',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/aveeno.png',
-      title: 'Aveeno',
-      lessonCount: 22,
-      money: 18,
-      rating: 4.6,
-    ),
-    Category(
-      imagePath: 'assets/interFace2.png',
-      title: 'TESTER 1',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/interFace3.png',
-      title: 'TESTER2',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-  ];
-
-  /*static List<Category> categoryList = <Category>[
-    Category(
-      imagePath: 'assets/neutrogena.jpg',
-      title: 'Neutrogena',
-      lessonCount: 27,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/cerave.jpg',
-      title: 'CeraVe',
-      lessonCount: 22,
-      money: 18,
-      rating: 4.6,
-    ),
-    Category(
-      imagePath: 'assets/curology.jpeg',
-      title: 'Curology',
-      lessonCount: 24,
-      money: 25,
-      rating: 4.3,
-    ),
-    Category(
-      imagePath: 'assets/aveeno.png',
-      title: 'Aveeno',
-      lessonCount: 22,
-      money: 18,
-      rating: 4.6,
-    ),
-  ];*/
+  static List<Category> categoryHair = <Category>[
+    ogx, garnier, herbalEssences, loveBeautyPlanet];
 
   static List<Category> popularBrandList = <Category>[
-    Category(
-      imagePath: 'assets/neutrogena.jpg',
-      title: 'Neutrogena',
-      lessonCount: 12,
-      money: 25,
-      rating: 4.8,
-    ),
-    Category(
-      imagePath: 'assets/cerave.jpg',
-      title: 'CeraVe',
-      lessonCount: 28,
-      money: 208,
-      rating: 4.9,
-    ),
-    Category(
-      imagePath: 'assets/curology.jpeg',
-      title: 'Curology',
-      lessonCount: 12,
-      money: 25,
-      rating: 4.8,
-    ),
-    Category(
-      imagePath: 'assets/aveeno.png',
-      title: 'Aveeno',
-      lessonCount: 28,
-      money: 208,
-      rating: 4.9,
-    ),
-  ];
+    neutrogena, ceraVe, kosas, garnier];
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // static List<Category> categorySkincare = <Category>[
+  //   //neutrogena,
+  //   Category(
+  //       imagePath: 'assets/neutrogena.jpg',
+  //       title: 'Neutrogena',
+  //       cat: 'skincare',
+  //       rating: 'bad',
+  //       ingredients: 'bad',
+  //       sustainability: 'iffy',
+  //       animalRights: 'bad',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/cerave.jpg',
+  //     title: 'CeraVe',
+  //     cat: 'skincare',
+  //     rating: 'bad',
+  //     ingredients: 'bad',
+  //     sustainability: 'bad',
+  //     animalRights: 'iffy',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/clinique.png',
+  //     title: 'Clinique',
+  //     cat: 'skincare',
+  //     rating: 'iffy',
+  //     ingredients: 'iffy',
+  //     sustainability: 'good',
+  //     animalRights: 'bad',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/beautyCounter.png',
+  //     title: 'Beauty Counter',
+  //     cat: 'skincare',
+  //     rating: 'good',
+  //     ingredients: 'good',
+  //     sustainability: 'iffy',
+  //     animalRights: 'good',
+  //   ),
+  // ];
+
+  // static List<Category> categoryMakeup = <Category>[
+  //   Category(
+  //     imagePath: 'assets/bareMinerals.png',
+  //     title: 'bareMinerals',
+  //     cat: 'makeup',
+  //     rating: 'iffy',
+  //     ingredients: 'bad',
+  //     sustainability: 'iffy',
+  //     animalRights: 'iffy',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/kosas.jpg',
+  //     title: 'Kosas',
+  //     cat: 'makeup',
+  //     rating: 'good',
+  //     ingredients: 'best',
+  //     sustainability: 'iffy',
+  //     animalRights: 'good',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/burtsBees.png',
+  //     title: "Burt's Bees",
+  //     cat: 'makeup',
+  //     rating: 'good',
+  //     ingredients: 'good',
+  //     sustainability: 'good',
+  //     animalRights: 'good',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/tarte.png',
+  //     title: 'Tarte',
+  //     cat: 'makeup',
+  //     rating: 'bad',
+  //     ingredients: 'bad',
+  //     sustainability: 'bad',
+  //     animalRights: 'good',
+  //   ),
+  // ];
+  //
+  // static List<Category> categoryHair = <Category>[
+  //   Category(
+  //     imagePath: 'assets/ogx.jpg',
+  //     title: 'OGX',
+  //     cat: 'hair',
+  //     rating: 'bad',
+  //     ingredients: 'bad',
+  //     sustainability: 'bad',
+  //     animalRights: 'bad',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/garnier.jpg',
+  //     title: 'Garnier',
+  //     cat: 'hair',
+  //     rating: 'iffy',
+  //     ingredients: 'bad',
+  //     sustainability: 'iffy',
+  //     animalRights: 'good',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/herbalEssences.jpg',
+  //     title: 'Herbal Essences',
+  //     cat: 'hair',
+  //     rating: 'bad',
+  //     ingredients: 'bad',
+  //     sustainability: 'bad',
+  //     animalRights: 'iffy',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/loveBeautyPlanet.jpg',
+  //     title: 'Love, Beauty, Planet',
+  //     cat: 'hair',
+  //     rating: 'bad',
+  //     ingredients: 'bad',
+  //     sustainability: 'bad',
+  //     animalRights: 'bad',
+  //   ),
+  // ];
+
+
+
+  // static List<Category> popularBrandList = <Category>[
+  //   Category(
+  //     imagePath: 'assets/neutrogena.jpg',
+  //     title: 'Neutrogena',
+  //     cat: 'skincare',
+  //     rating: 'bad',
+  //     ingredients: 'bad',
+  //     sustainability: 'iffy',
+  //     animalRights: 'bad',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/cerave.jpg',
+  //     title: 'CeraVe',
+  //     cat: 'skincare',
+  //     rating: 'bad',
+  //     ingredients: 'bad',
+  //     sustainability: 'bad',
+  //     animalRights: 'iffy',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/kosas.jpg',
+  //     title: 'Kosas',
+  //     cat: 'makeup',
+  //     rating: 'good',
+  //     ingredients: 'best',
+  //     sustainability: 'iffy',
+  //     animalRights: 'good',
+  //   ),
+  //   Category(
+  //     imagePath: 'assets/garnier.jpg',
+  //     title: 'Garnier',
+  //     cat: 'hair',
+  //     rating: 'iffy',
+  //     ingredients: 'bad',
+  //     sustainability: 'iffy',
+  //     animalRights: 'good',
+  //   ),
+  // ];

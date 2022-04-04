@@ -91,20 +91,20 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                top: 32.0, left: 18, right: 16),
-                            child: Text(
-                              'Neutrogena',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 22,
-                                letterSpacing: 0.27,
-                                color: EcoAllureAppTheme.darkerText,
-                              ),
-                            ),
-                          ),
+                          // Padding(
+                          //   padding: const EdgeInsets.only(
+                          //       top: 32.0, left: 18, right: 16),
+                          //   child: Text(
+                          //     'Neutrogena',
+                          //     textAlign: TextAlign.left,
+                          //     style: TextStyle(
+                          //       fontWeight: FontWeight.w600,
+                          //       fontSize: 22,
+                          //       letterSpacing: 0.27,
+                          //       color: EcoAllureAppTheme.darkerText,
+                          //     ),
+                          //   ),
+                          // ),
                           Padding(
                             padding: const EdgeInsets.only(
                                 left: 16, right: 16, bottom: 8, top: 16),
@@ -113,26 +113,36 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  '\$28.99',
+                                  'Neutrogena',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w200,
+                                    fontWeight: FontWeight.w600,
                                     fontSize: 22,
                                     letterSpacing: 0.27,
-                                    color: EcoAllureAppTheme.nearlyGreen,
+                                    color: EcoAllureAppTheme.darkerText,
                                   ),
                                 ),
+                                // Text(
+                                //   '\$28.99',
+                                //   textAlign: TextAlign.left,
+                                //   style: TextStyle(
+                                //     fontWeight: FontWeight.w200,
+                                //     fontSize: 22,
+                                //     letterSpacing: 0.27,
+                                //     color: EcoAllureAppTheme.nearlyGreen,
+                                //   ),
+                                // ),
                                 Container(
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                        '4.3',
+                                        'iffy',
                                         textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w200,
                                           fontSize: 22,
                                           letterSpacing: 0.27,
-                                          color: EcoAllureAppTheme.grey,
+                                          color: EcoAllureAppTheme.nearlyGreen,
                                         ),
                                       ),
                                       Icon(
@@ -153,9 +163,9 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                               padding: const EdgeInsets.all(8),
                               child: Row(
                                 children: <Widget>[
-                                  getTimeBoxUI('24', 'Class'),
-                                  getTimeBoxUI('2hours', 'Time'),
-                                  getTimeBoxUI('24', 'Seat'),
+                                  getTimeBoxUI('BAD', 'Ingredients'),
+                                  getTimeBoxUI('IFFY', 'Sustainability'),
+                                  getTimeBoxUI('BAD', 'Animal Rights'),
                                 ],
                               ),
                             ),
@@ -168,7 +178,8 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: Text(
-                                  'Lorem ipsum is simply dummy text of printing & typesetting industry, Lorem ipsum is simply dummy text of printing & typesetting industry.',
+                                  // need to figure out how to make this textbox endless scrolling
+                                  "Ingredient info:\n\nSustainability info:\n\nAnimal Rights info:",
                                   textAlign: TextAlign.justify,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w200,
@@ -176,84 +187,84 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                     letterSpacing: 0.27,
                                     color: EcoAllureAppTheme.grey,
                                   ),
-                                  maxLines: 3,
+                                  maxLines: 20,
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                             ),
                           ),
-                          AnimatedOpacity(
-                            duration: const Duration(milliseconds: 500),
-                            opacity: opacity3,
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 16, bottom: 16, right: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    width: 48,
-                                    height: 48,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                        color: EcoAllureAppTheme.nearlyWhite,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
-                                        ),
-                                        border: Border.all(
-                                            color: EcoAllureAppTheme.grey
-                                                .withOpacity(0.2)),
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: EcoAllureAppTheme.nearlyGreen,
-                                        size: 28,
-                                      ),
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    width: 16,
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      height: 48,
-                                      decoration: BoxDecoration(
-                                        color: EcoAllureAppTheme.nearlyGreen,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
-                                        ),
-                                        boxShadow: <BoxShadow>[
-                                          BoxShadow(
-                                              color: EcoAllureAppTheme
-                                                  .nearlyGreen
-                                                  .withOpacity(0.5),
-                                              offset: const Offset(1.1, 1.1),
-                                              blurRadius: 10.0),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Join Course',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: EcoAllureAppTheme
-                                                .nearlyWhite,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: MediaQuery.of(context).padding.bottom,
-                          )
+                          // AnimatedOpacity(
+                          //   duration: const Duration(milliseconds: 500),
+                          //   opacity: opacity3,
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.only(
+                          //         left: 16, bottom: 16, right: 16),
+                          //     child: Row(
+                          //       mainAxisAlignment: MainAxisAlignment.center,
+                          //       crossAxisAlignment: CrossAxisAlignment.center,
+                          //       children: <Widget>[
+                          //         Container(
+                          //           width: 48,
+                          //           height: 48,
+                          //           child: Container(
+                          //             decoration: BoxDecoration(
+                          //               color: EcoAllureAppTheme.nearlyWhite,
+                          //               borderRadius: const BorderRadius.all(
+                          //                 Radius.circular(16.0),
+                          //               ),
+                          //               border: Border.all(
+                          //                   color: EcoAllureAppTheme.grey
+                          //                       .withOpacity(0.2)),
+                          //             ),
+                          //             child: Icon(
+                          //               Icons.add,
+                          //               color: EcoAllureAppTheme.nearlyGreen,
+                          //               size: 28,
+                          //             ),
+                          //           ),
+                          //         ),
+                          //         const SizedBox(
+                          //           width: 16,
+                          //         ),
+                          //         Expanded(
+                          //           child: Container(
+                          //             height: 48,
+                          //             decoration: BoxDecoration(
+                          //               color: EcoAllureAppTheme.nearlyGreen,
+                          //               borderRadius: const BorderRadius.all(
+                          //                 Radius.circular(16.0),
+                          //               ),
+                          //               boxShadow: <BoxShadow>[
+                          //                 BoxShadow(
+                          //                     color: EcoAllureAppTheme
+                          //                         .nearlyGreen
+                          //                         .withOpacity(0.5),
+                          //                     offset: const Offset(1.1, 1.1),
+                          //                     blurRadius: 10.0),
+                          //               ],
+                          //             ),
+                          //             child: Center(
+                          //               child: Text(
+                          //                 'Join Course',
+                          //                 textAlign: TextAlign.left,
+                          //                 style: TextStyle(
+                          //                   fontWeight: FontWeight.w600,
+                          //                   fontSize: 18,
+                          //                   letterSpacing: 0.0,
+                          //                   color: EcoAllureAppTheme
+                          //                       .nearlyWhite,
+                          //                 ),
+                          //               ),
+                          //             ),
+                          //           ),
+                          //         )
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
+                          // SizedBox(
+                          //   height: MediaQuery.of(context).padding.bottom,
+                          // )
                         ],
                       ),
                     ),
@@ -261,32 +272,32 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                 ),
               ),
             ),
-            Positioned(
-              top: (MediaQuery.of(context).size.width / 1.2) - 24.0 - 35,
-              right: 35,
-              child: ScaleTransition(
-                alignment: Alignment.center,
-                scale: CurvedAnimation(
-                    parent: animationController!, curve: Curves.fastOutSlowIn),
-                child: Card(
-                  color: EcoAllureAppTheme.nearlyGreen,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  elevation: 10.0,
-                  child: Container(
-                    width: 60,
-                    height: 60,
-                    child: Center(
-                      child: Icon(
-                        Icons.favorite,
-                        color: EcoAllureAppTheme.nearlyWhite,
-                        size: 30,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            // Positioned(
+            //   top: (MediaQuery.of(context).size.width / 1.2) - 24.0 - 35,
+            //   right: 35,
+            //   child: ScaleTransition(
+            //     alignment: Alignment.center,
+            //     scale: CurvedAnimation(
+            //         parent: animationController!, curve: Curves.fastOutSlowIn),
+            //     child: Card(
+            //       color: EcoAllureAppTheme.nearlyGreen,
+            //       shape: RoundedRectangleBorder(
+            //           borderRadius: BorderRadius.circular(50.0)),
+            //       elevation: 10.0,
+            //       child: Container(
+            //         width: 60,
+            //         height: 60,
+            //         child: Center(
+            //           child: Icon(
+            //             Icons.favorite,
+            //             color: EcoAllureAppTheme.nearlyWhite,
+            //             size: 30,
+            //           ),
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),
             Padding(
               padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
               child: SizedBox(
@@ -330,7 +341,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
         ),
         child: Padding(
           padding: const EdgeInsets.only(
-              left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
+              left: 14.0, right: 14.0, top: 11.0, bottom: 11.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -349,8 +360,8 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                 txt2,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontWeight: FontWeight.w200,
-                  fontSize: 14,
+                  fontWeight: FontWeight.w100,
+                  fontSize: 8,
                   letterSpacing: 0.27,
                   color: EcoAllureAppTheme.grey,
                 ),

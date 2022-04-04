@@ -154,11 +154,11 @@ class CategoryView extends StatelessWidget {
                                               CrossAxisAlignment.center,
                                               children: <Widget>[
                                                 Text(
-                                                  '${category!.lessonCount} lesson',
+                                                  category!.cat,
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
                                                     fontWeight: FontWeight.w200,
-                                                    fontSize: 10,
+                                                    fontSize: 8,
                                                     letterSpacing: 0.27,
                                                     color: EcoAllureAppTheme
                                                         .grey,
@@ -168,13 +168,13 @@ class CategoryView extends StatelessWidget {
                                                   child: Row(
                                                     children: <Widget>[
                                                       Text(
-                                                        '${category!.rating}',
+                                                        category!.rating,
                                                         textAlign:
                                                         TextAlign.left,
                                                         style: TextStyle(
                                                           fontWeight:
                                                           FontWeight.w200,
-                                                          fontSize: 16,
+                                                          fontSize: 14,
                                                           letterSpacing: 0.27,
                                                           color:
                                                           EcoAllureAppTheme
@@ -182,7 +182,7 @@ class CategoryView extends StatelessWidget {
                                                         ),
                                                       ),
                                                       Icon(
-                                                        Icons.star,
+                                                        Icons.emoji_nature,
                                                         color:
                                                         EcoAllureAppTheme
                                                             .nearlyGreen,
