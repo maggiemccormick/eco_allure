@@ -204,8 +204,8 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: Text(
                                   // need to figure out how to make this textbox endless scrolling
-                                  "Ingredient info:\n\nSustainability info:\n\nAnimal Rights info:",
-                                  textAlign: TextAlign.justify,
+                                  category!.brandInfo,
+                                  textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w200,
                                     fontSize: 14,

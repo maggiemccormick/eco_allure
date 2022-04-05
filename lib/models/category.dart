@@ -10,6 +10,7 @@ class Category {
     this.sustainability = '',
     this.animalRights = '',
     this.num = 0,
+    this.brandInfo = '',
   });
 
   String title;
@@ -20,6 +21,7 @@ class Category {
   String sustainability;
   String animalRights;
   int num;
+  String brandInfo;
 
   static List<Category> categorySkincare = <Category>[
     neutrogena, ceraVe, clinique, beautyCounter];
