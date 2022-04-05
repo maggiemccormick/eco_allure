@@ -199,6 +199,7 @@ class _SignInState extends State<SignIn> {
                       // setState(() => loading = true);
                       dynamic result = await _auth.signInWithEmailAndPassword(email, password);
                       if (result == null){
+                        CustomSnackBar(context, const Text('Could not sign in with those credentials'));
                         setState(() {
                           error = 'Could not sign in with those credentials';
                           //loading = false;

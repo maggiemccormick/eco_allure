@@ -53,7 +53,7 @@ class _PopularBrandsListViewState extends State<PopularBrandsListView>
                     ),
                   );
                   animationController?.forward();
-                  return CategoryView(
+                  return PCategoryView(
                     callback: widget.callBack,
                     category: Category.popularBrandList[index],
                     animation: animation,
@@ -75,8 +75,8 @@ class _PopularBrandsListViewState extends State<PopularBrandsListView>
   }
 }
 
-class CategoryView extends StatelessWidget {
-  const CategoryView(
+class PCategoryView extends StatelessWidget {
+  const PCategoryView(
       {Key? key,
         this.category,
         this.animationController,
@@ -88,6 +88,8 @@ class CategoryView extends StatelessWidget {
   final Category? category;
   final AnimationController? animationController;
   final Animation<double>? animation;
+
+  //Category? getCat() {return category;}
 
   @override
   Widget build(BuildContext context) {
@@ -246,4 +248,5 @@ class CategoryView extends StatelessWidget {
       },
     );
   }
+
 }

@@ -31,6 +31,11 @@ class Category {
   static List<Category> popularBrandList = <Category>[
     neutrogena, ceraVe, kosas, garnier];
 
+  static List<Category> allBrands = <Category>[
+    neutrogena, ceraVe, clinique, beautyCounter,
+    bareMinerals, kosas, burtsBees, tarte,
+    ogx, garnier, herbalEssences, loveBeautyPlanet];
+
 }
 
 

@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eco_allure/services/auth.dart';
+import '../../models/product.dart';
 import 'category_list_view.dart';
 import 'brand_info_screen.dart';
 import 'popular_brands_list_view.dart';
@@ -6,10 +8,15 @@ import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';
 import '../../eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
+import 'package:eco_allure/services/database.dart';
+import 'package:provider/provider.dart';
+import 'package:eco_allure/screens/home/category_view.dart';
 
 class EcoAllureHomeScreen extends StatefulWidget {
   @override
   _EcoAllureHomeScreenState createState() => _EcoAllureHomeScreenState();
+
+  static late Category cat;
 }
 
 class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
@@ -17,35 +24,41 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
 
   final AuthService _auth = AuthService();
 
+  get cat => null;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: EcoAllureAppTheme.notWhite,
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: Column(
-          children: <Widget>[
-            SizedBox(
-              height: MediaQuery.of(context).padding.top,
-            ),
-            getAppBarUI(),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Container(
-                  height: MediaQuery.of(context).size.height,
-                  child: Column(
-                    children: <Widget>[
-                      //getSearchBarUI(),
-                      getCategoryUI(),
-                      Flexible(
-                        child: getPopularCourseUI(),
-                      ),
-                    ],
+    return StreamProvider<List<Product>?>.value(
+      value: DatabaseService().products,
+      initialData: null,
+      child: Container(
+        color: EcoAllureAppTheme.notWhite,
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Column(
+            children: <Widget>[
+              SizedBox(
+                height: MediaQuery.of(context).padding.top,
+              ),
+              getAppBarUI(),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Container(
+                    height: MediaQuery.of(context).size.height,
+                    child: Column(
+                      children: <Widget>[
+                        //getSearchBarUI(),
+                        getCategoryUI(),
+                        Flexible(
+                          child: getPopularCourseUI(),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -122,7 +135,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
           Flexible(
             child: PopularBrandsListView(
               callBack: () {
-                moveTo();
+                //moveTo();
               },
             ),
           )
@@ -132,10 +145,12 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
   }
 
   void moveTo() {
+    // Category? cat = this.category;
+    // CategoryView cView = CategoryView();
     Navigator.push<dynamic>(
       context,
       MaterialPageRoute<dynamic>(
-        builder: (BuildContext context) => BrandInfoScreen(),
+        builder: (context) => BrandInfoScreen(),
       ),
     );
   }

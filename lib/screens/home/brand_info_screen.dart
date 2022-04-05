@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../eco_allure_app_theme.dart';
+import 'package:eco_allure/models/category.dart';
 
 class BrandInfoScreen extends StatefulWidget {
   @override
@@ -113,7 +114,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  'Neutrogena',
+                                'Neutrogena',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
@@ -325,7 +326,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
     );
   }
 
-  Widget getTimeBoxUI(String text1, String txt2) {
+  Widget getTimeBoxUI(String? text1, String? txt2) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
@@ -347,7 +348,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                text1,
+                text1!,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
@@ -357,7 +358,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                 ),
               ),
               Text(
-                txt2,
+                txt2!,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.w100,
