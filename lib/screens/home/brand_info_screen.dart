@@ -2,13 +2,36 @@ import 'package:flutter/material.dart';
 import '../../eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
 
+import 'brand_info_screen.dart';
+
+List<Category> aList = <Category>[];
+var indexList = 0;
+
 class BrandInfoScreen extends StatefulWidget {
+  // BrandInfoScreen({
+  //   required this.category,
+  // });
+  // Category category;
   @override
   _BrandInfoScreenState createState() => _BrandInfoScreenState();
 }
 
+// Category getCat(){return category!;}
+
+// updateList(Category cat){
+//   if(aList.isNotEmpty){
+//     aList.removeLast();
+//   }
+//   aList.add(cat);
+// }
+
+List<Category> getList(){
+  return aList;
+}
+
 class _BrandInfoScreenState extends State<BrandInfoScreen>
     with TickerProviderStateMixin {
+  Category? category = getList()[indexList];
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -48,6 +71,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
         (MediaQuery.of(context).size.width / 1.2) +
         24.0;
     return Container(
+      //category: aList[0],
       color: EcoAllureAppTheme.nearlyWhite,
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -57,7 +81,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/neutrogena.jpg'),
+                  child: Image.asset(category!.imagePath),
                 ),
               ],
             ),
@@ -114,7 +138,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                'Neutrogena',
+                                  category!.title,
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
@@ -137,7 +161,7 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                        'iffy',
+                                        category!.rating,
                                         textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w200,
@@ -164,9 +188,9 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                               padding: const EdgeInsets.all(8),
                               child: Row(
                                 children: <Widget>[
-                                  getTimeBoxUI('BAD', 'Ingredients'),
-                                  getTimeBoxUI('IFFY', 'Sustainability'),
-                                  getTimeBoxUI('BAD', 'Animal Rights'),
+                                  getTimeBoxUI(category!.ingredients, 'Ingredients'),
+                                  getTimeBoxUI(category!.sustainability, 'Sustainability'),
+                                  getTimeBoxUI(category!.animalRights, 'Animal Rights'),
                                 ],
                               ),
                             ),
@@ -194,78 +218,6 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                               ),
                             ),
                           ),
-                          // AnimatedOpacity(
-                          //   duration: const Duration(milliseconds: 500),
-                          //   opacity: opacity3,
-                          //   child: Padding(
-                          //     padding: const EdgeInsets.only(
-                          //         left: 16, bottom: 16, right: 16),
-                          //     child: Row(
-                          //       mainAxisAlignment: MainAxisAlignment.center,
-                          //       crossAxisAlignment: CrossAxisAlignment.center,
-                          //       children: <Widget>[
-                          //         Container(
-                          //           width: 48,
-                          //           height: 48,
-                          //           child: Container(
-                          //             decoration: BoxDecoration(
-                          //               color: EcoAllureAppTheme.nearlyWhite,
-                          //               borderRadius: const BorderRadius.all(
-                          //                 Radius.circular(16.0),
-                          //               ),
-                          //               border: Border.all(
-                          //                   color: EcoAllureAppTheme.grey
-                          //                       .withOpacity(0.2)),
-                          //             ),
-                          //             child: Icon(
-                          //               Icons.add,
-                          //               color: EcoAllureAppTheme.nearlyGreen,
-                          //               size: 28,
-                          //             ),
-                          //           ),
-                          //         ),
-                          //         const SizedBox(
-                          //           width: 16,
-                          //         ),
-                          //         Expanded(
-                          //           child: Container(
-                          //             height: 48,
-                          //             decoration: BoxDecoration(
-                          //               color: EcoAllureAppTheme.nearlyGreen,
-                          //               borderRadius: const BorderRadius.all(
-                          //                 Radius.circular(16.0),
-                          //               ),
-                          //               boxShadow: <BoxShadow>[
-                          //                 BoxShadow(
-                          //                     color: EcoAllureAppTheme
-                          //                         .nearlyGreen
-                          //                         .withOpacity(0.5),
-                          //                     offset: const Offset(1.1, 1.1),
-                          //                     blurRadius: 10.0),
-                          //               ],
-                          //             ),
-                          //             child: Center(
-                          //               child: Text(
-                          //                 'Join Course',
-                          //                 textAlign: TextAlign.left,
-                          //                 style: TextStyle(
-                          //                   fontWeight: FontWeight.w600,
-                          //                   fontSize: 18,
-                          //                   letterSpacing: 0.0,
-                          //                   color: EcoAllureAppTheme
-                          //                       .nearlyWhite,
-                          //                 ),
-                          //               ),
-                          //             ),
-                          //           ),
-                          //         )
-                          //       ],
-                          //     ),
-                          //   ),
-                          // ),
-                          // SizedBox(
-                          //   height: MediaQuery.of(context).padding.bottom,
-                          // )
                         ],
                       ),
                     ),
@@ -273,32 +225,6 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                 ),
               ),
             ),
-            // Positioned(
-            //   top: (MediaQuery.of(context).size.width / 1.2) - 24.0 - 35,
-            //   right: 35,
-            //   child: ScaleTransition(
-            //     alignment: Alignment.center,
-            //     scale: CurvedAnimation(
-            //         parent: animationController!, curve: Curves.fastOutSlowIn),
-            //     child: Card(
-            //       color: EcoAllureAppTheme.nearlyGreen,
-            //       shape: RoundedRectangleBorder(
-            //           borderRadius: BorderRadius.circular(50.0)),
-            //       elevation: 10.0,
-            //       child: Container(
-            //         width: 60,
-            //         height: 60,
-            //         child: Center(
-            //           child: Icon(
-            //             Icons.favorite,
-            //             color: EcoAllureAppTheme.nearlyWhite,
-            //             size: 30,
-            //           ),
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
             Padding(
               padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
               child: SizedBox(

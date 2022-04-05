@@ -147,12 +147,12 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
   void moveTo() {
     // Category? cat = this.category;
     // CategoryView cView = CategoryView();
-    Navigator.push<dynamic>(
-      context,
-      MaterialPageRoute<dynamic>(
-        builder: (context) => BrandInfoScreen(),
-      ),
-    );
+    // Navigator.push<dynamic>(
+    //   context,
+    //   MaterialPageRoute<dynamic>(
+    //     builder: (context) => BrandInfoScreen(),
+    //   ),
+    // );
   }
 
   // function that changes UI based on which category button is selected
@@ -188,6 +188,8 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
               });
               mainList.clear();
               mainList.addAll(listCat);
+              aList.clear();
+              aList.addAll(listCat);
             },
             child: Padding(
               padding: const EdgeInsets.only(

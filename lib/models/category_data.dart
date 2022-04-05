@@ -7,7 +7,9 @@ Category neutrogena = Category(
   rating: 'bad',
   ingredients: 'bad',
   sustainability: 'iffy',
-  animalRights: 'bad',);
+  animalRights: 'bad',
+  num: 0,
+);
 
 Category ceraVe = Category(
   imagePath: 'assets/cerave.jpg',
@@ -17,6 +19,7 @@ Category ceraVe = Category(
   ingredients: 'bad',
   sustainability: 'bad',
   animalRights: 'iffy',
+  num: 1,
 );
 
 Category clinique = Category(
@@ -27,6 +30,7 @@ Category clinique = Category(
   ingredients: 'iffy',
   sustainability: 'good',
   animalRights: 'bad',
+  num: 2,
 );
 
 Category beautyCounter = Category(
@@ -37,6 +41,7 @@ Category beautyCounter = Category(
   ingredients: 'good',
   sustainability: 'iffy',
   animalRights: 'good',
+  num: 3,
 );
 
 Category bareMinerals = Category(
@@ -47,6 +52,7 @@ Category bareMinerals = Category(
   ingredients: 'bad',
   sustainability: 'iffy',
   animalRights: 'iffy',
+  num: 0,
 );
 
 Category kosas = Category(
@@ -57,6 +63,7 @@ Category kosas = Category(
   ingredients: 'best',
   sustainability: 'iffy',
   animalRights: 'good',
+  num: 1,
 );
 
 Category burtsBees = Category(
@@ -67,6 +74,7 @@ Category burtsBees = Category(
   ingredients: 'good',
   sustainability: 'good',
   animalRights: 'good',
+  num: 2,
 );
 
 Category tarte = Category(
@@ -77,6 +85,7 @@ Category tarte = Category(
   ingredients: 'bad',
   sustainability: 'bad',
   animalRights: 'good',
+  num: 3,
 );
 
 Category ogx = Category(
@@ -87,6 +96,7 @@ Category ogx = Category(
   ingredients: 'bad',
   sustainability: 'bad',
   animalRights: 'bad',
+  num: 0,
 );
 
 Category garnier = Category(
@@ -97,6 +107,7 @@ Category garnier = Category(
   ingredients: 'bad',
   sustainability: 'iffy',
   animalRights: 'good',
+  num: 1,
 );
 
 Category herbalEssences = Category(
@@ -107,6 +118,7 @@ Category herbalEssences = Category(
   ingredients: 'bad',
   sustainability: 'bad',
   animalRights: 'iffy',
+  num: 2,
 );
 
 Category loveBeautyPlanet = Category(
@@ -117,4 +129,5 @@ Category loveBeautyPlanet = Category(
   ingredients: 'bad',
   sustainability: 'bad',
   animalRights: 'bad',
+  num: 3,
 );
