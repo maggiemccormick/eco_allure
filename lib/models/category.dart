@@ -9,6 +9,7 @@ class Category {
     this.ingredients = '',
     this.sustainability = '',
     this.animalRights = '',
+    this.num = 0,
   });
 
   String title;
@@ -18,6 +19,7 @@ class Category {
   String ingredients;
   String sustainability;
   String animalRights;
+  int num;
 
   static List<Category> categorySkincare = <Category>[
     neutrogena, ceraVe, clinique, beautyCounter];
@@ -30,6 +32,11 @@ class Category {
 
   static List<Category> popularBrandList = <Category>[
     neutrogena, ceraVe, kosas, garnier];
+
+  static List<Category> allBrands = <Category>[
+    neutrogena, ceraVe, clinique, beautyCounter,
+    bareMinerals, kosas, burtsBees, tarte,
+    ogx, garnier, herbalEssences, loveBeautyPlanet];
 
 }
 

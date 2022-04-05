@@ -33,7 +33,6 @@ class _SignUpState extends State<SignUp> {
   final FocusNode focusNodeName = FocusNode();
 
   bool _obscureTextPassword = true;
-  bool _obscureTextConfirmPassword = true;
 
   TextEditingController signupEmailController = TextEditingController();
   TextEditingController signupNameController = TextEditingController();
@@ -53,7 +52,7 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading() : Container(
-      padding: const EdgeInsets.only(top: 23.0),
+      padding: const EdgeInsets.only(top: 0.0),
       child: Column(
         children: <Widget>[
           Stack(
@@ -76,7 +75,7 @@ class _SignUpState extends State<SignUp> {
                           padding: const EdgeInsets.only(
                               top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
                           child: TextFormField(
-                            focusNode: focusNodeName,
+                            //focusNode: focusNodeName,
                             controller: signupNameController,
                             keyboardType: TextInputType.text,
                             textCapitalization: TextCapitalization.words,
@@ -118,7 +117,7 @@ class _SignUpState extends State<SignUp> {
                           padding: const EdgeInsets.only(
                               top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
                           child: TextFormField(
-                            focusNode: focusNodeEmail,
+                            //focusNode: focusNodeEmail,
                             controller: signupEmailController,
                             keyboardType: TextInputType.emailAddress,
                             autocorrect: false,
@@ -159,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                           padding: const EdgeInsets.only(
                               top: 20.0, bottom: 20.0, left: 25.0, right: 25.0),
                           child: TextFormField(
-                            focusNode: focusNodePassword,
+                            //focusNode: focusNodePassword,
                             controller: signupPasswordController,
                             obscureText: _obscureTextPassword,
                             autocorrect: false,
@@ -273,7 +272,7 @@ class _SignUpState extends State<SignUp> {
       _obscureTextPassword = !_obscureTextPassword;
     });
   }
-  
+
 
     // Scaffold(
     //     backgroundColor: Colors.brown[100],
