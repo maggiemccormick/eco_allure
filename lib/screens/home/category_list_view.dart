@@ -1,11 +1,8 @@
-import '../../eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
-import 'package:eco_allure/main.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 
-import '../../models/product.dart';
+import '../../models/brand.dart';
 import 'category_view.dart';
 
 List<Category> mainList = <Category>[]; // need to figure out how to get skincare to load first
@@ -43,7 +40,7 @@ class _CategoryListViewState extends State<CategoryListView>
   @override
   Widget build(BuildContext context) {
 
-    final products = Provider.of<List<Product>>(context);
+    final products = Provider.of<List<Brand>>(context);
     //products
 
     return Padding(
@@ -76,7 +73,6 @@ class _CategoryListViewState extends State<CategoryListView>
 
                   return CategoryView(
                     category: mainList[index],
-                    //category: mainList[index],
                     animation: animation,
                     animationController: animationController,
                     callback: widget.callBack,

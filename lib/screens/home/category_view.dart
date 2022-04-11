@@ -1,8 +1,5 @@
 import 'package:eco_allure/screens/home/brand_info_screen.dart';
-import 'package:eco_allure/screens/home/home_eco_allure.dart';
 import 'package:flutter/material.dart';
-import 'package:eco_allure/models/product.dart';
-
 import '../../eco_allure_app_theme.dart';
 import '../../main.dart';
 import '../../models/category.dart';
@@ -11,16 +8,14 @@ List<Category> thisList = <Category>[];
 
 class CategoryView extends StatefulWidget {
   CategoryView(
-      {
-        //required this.product,
-        //this.category,
-        this.animationController,
-        this.animation,
-        this.callback,
-        required this.category,});
-      //: super(key: key);
+    {
+      this.animationController,
+      this.animation,
+      this.callback,
+      required this.category,
+    }
+  );
 
-  //final Product product;
   final VoidCallback? callback;
   final Category category;
   final AnimationController? animationController;
@@ -35,12 +30,7 @@ class CategoryView extends StatefulWidget {
 }
 
 class _CategoryViewState extends State<CategoryView> {
-  //get category => this.category;
 
-  // //Category get category => category;
-  // Category? catRet = category;
-  //
-  // static Category? get category => category;
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -190,7 +180,6 @@ class _CategoryViewState extends State<CategoryView> {
                                                       EcoAllureAppTheme
                                                           .nearlyWhite,
                                                       onPressed: () {
-                                                        //updateList(widget.category!);
                                                         print("THIS IS NUM ");
                                                         print(widget.category.num);
                                                         indexList = widget.category.num;
@@ -198,7 +187,6 @@ class _CategoryViewState extends State<CategoryView> {
                                                           context,
                                                           MaterialPageRoute(builder: (context) => BrandInfoScreen(),
                                                         ));
-                                                        //EcoAllureHomeScreen.cat = catRet!;
                                                       },
                                                     ),
                                                   ),

@@ -2,28 +2,13 @@ import 'package:flutter/material.dart';
 import '../../eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
 
-import 'brand_info_screen.dart';
-
 List<Category> aList = <Category>[];
 var indexList = 0;
 
 class BrandInfoScreen extends StatefulWidget {
-  // BrandInfoScreen({
-  //   required this.category,
-  // });
-  // Category category;
   @override
   _BrandInfoScreenState createState() => _BrandInfoScreenState();
 }
-
-// Category getCat(){return category!;}
-
-// updateList(Category cat){
-//   if(aList.isNotEmpty){
-//     aList.removeLast();
-//   }
-//   aList.add(cat);
-// }
 
 List<Category> getList(){
   return aList;
@@ -116,20 +101,6 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          // Padding(
-                          //   padding: const EdgeInsets.only(
-                          //       top: 32.0, left: 18, right: 16),
-                          //   child: Text(
-                          //     'Neutrogena',
-                          //     textAlign: TextAlign.left,
-                          //     style: TextStyle(
-                          //       fontWeight: FontWeight.w600,
-                          //       fontSize: 22,
-                          //       letterSpacing: 0.27,
-                          //       color: EcoAllureAppTheme.darkerText,
-                          //     ),
-                          //   ),
-                          // ),
                           Padding(
                             padding: const EdgeInsets.only(
                                 left: 16, right: 16, bottom: 8, top: 16),
@@ -147,16 +118,6 @@ class _BrandInfoScreenState extends State<BrandInfoScreen>
                                     color: EcoAllureAppTheme.darkerText,
                                   ),
                                 ),
-                                // Text(
-                                //   '\$28.99',
-                                //   textAlign: TextAlign.left,
-                                //   style: TextStyle(
-                                //     fontWeight: FontWeight.w200,
-                                //     fontSize: 22,
-                                //     letterSpacing: 0.27,
-                                //     color: EcoAllureAppTheme.nearlyGreen,
-                                //   ),
-                                // ),
                                 Container(
                                   child: Row(
                                     children: <Widget>[
