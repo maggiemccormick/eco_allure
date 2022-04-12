@@ -11,12 +11,13 @@ These are some images of the application.
 
 ### Login Screen
 
-![Login Screen](/assets/loginScreen.jpg)
+<img src="/assets/loginScreen.jpg" width="100">
 
 ### Home Page
 
-![Home Page](/assets/homeScreen.png)
+<img src="/assets/homeScreen.png" width="100">
 
 ### Brand Info Screen
 
-![Brand Info Screen](/assets/brandInfoScreen.png)
+<img src="/assets/brandInfoScreen.png" width="100">
+
