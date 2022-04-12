@@ -1,6 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eco_allure/services/auth.dart';
-import '../../models/product.dart';
+import '../../models/brand.dart';
 import 'category_list_view.dart';
 import 'brand_info_screen.dart';
 import 'popular_brands_list_view.dart';
@@ -10,7 +9,6 @@ import '../../eco_allure_app_theme.dart';
 import 'package:eco_allure/models/category.dart';
 import 'package:eco_allure/services/database.dart';
 import 'package:provider/provider.dart';
-import 'package:eco_allure/screens/home/category_view.dart';
 
 class EcoAllureHomeScreen extends StatefulWidget {
   @override
@@ -28,7 +26,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<List<Product>?>.value(
+    return StreamProvider<List<Brand>?>.value(
       value: DatabaseService().products,
       initialData: null,
       child: Container(
@@ -72,7 +70,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
         Padding(
           padding: const EdgeInsets.only(top: 8.0, left: 18, right: 16),
           child: Text(
-            'Product Type',
+            'Brand Type',
             textAlign: TextAlign.left,
             style: TextStyle(
               fontWeight: FontWeight.w600,
@@ -108,7 +106,7 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
         ),
         CategoryListView(
           callBack: () {
-            moveTo();
+            //moveTo();
           },
         ),
       ],
@@ -142,17 +140,6 @@ class _EcoAllureHomeScreenState extends State<EcoAllureHomeScreen> {
         ],
       ),
     );
-  }
-
-  void moveTo() {
-    // Category? cat = this.category;
-    // CategoryView cView = CategoryView();
-    // Navigator.push<dynamic>(
-    //   context,
-    //   MaterialPageRoute<dynamic>(
-    //     builder: (context) => BrandInfoScreen(),
-    //   ),
-    // );
   }
 
   // function that changes UI based on which category button is selected
@@ -342,3 +329,16 @@ enum CategoryType {
   makeup,
   hair,
 }
+
+
+
+// void moveTo() {
+//   // Category? cat = this.category;
+//   // CategoryView cView = CategoryView();
+//   // Navigator.push<dynamic>(
+//   //   context,
+//   //   MaterialPageRoute<dynamic>(
+//   //     builder: (context) => BrandInfoScreen(),
+//   //   ),
+//   // );
+// }

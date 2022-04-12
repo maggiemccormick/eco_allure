@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:eco_allure/models/product.dart';
+import 'package:eco_allure/models/brand.dart';
 
 class DatabaseService {
 
@@ -7,9 +7,9 @@ class DatabaseService {
   final CollectionReference brandCollection = FirebaseFirestore.instance.collection('products');
 
   // product list from snapshot
-  List<Product> _productListFromSnapshot(QuerySnapshot snapshot){
+  List<Brand> _productListFromSnapshot(QuerySnapshot snapshot){
     return snapshot.docs.map((doc){
-      return Product(
+      return Brand(
         title: doc.get('title') ?? '',
         cat: doc.get('cat') ?? '',
         rating: doc.get('rating') ?? '',
@@ -22,7 +22,7 @@ class DatabaseService {
   }
 
   // get products stream
-  Stream<List<Product>> get products {
+  Stream<List<Brand>> get products {
     return brandCollection.snapshots()
       .map(_productListFromSnapshot);
   }
