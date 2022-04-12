@@ -1,4 +1,4 @@
-class Product{
+class Brand{
 
   final String title;
   final String cat;
@@ -8,7 +8,7 @@ class Product{
   final String sustainability;
   final String animalRights;
 
-  Product({
+  Brand({
     this.title = '',
     this.imagePath = '',
     this.cat = '',
