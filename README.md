@@ -11,13 +11,13 @@ These are some images of the application.
 
 ### Login Screen
 
-<img src="/assets/loginScreen.jpg" width="100">
+<img src="/assets/loginScreen.jpg" width="200">
 
 ### Home Page
 
-<img src="/assets/homeScreen.png" width="100">
+<img src="/assets/homeScreen.png" width="200">
 
 ### Brand Info Screen
 
-<img src="/assets/brandInfoScreen.png" width="100">
+<img src="/assets/brandInfoScreen.png" width="200">
 
